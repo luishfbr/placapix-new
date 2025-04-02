@@ -1,0 +1,15 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model PlacasCriadas {
+  id        String   @id @default(uuid())
+  name      String
+  placa     String
+  createdAt DateTime @default(now())
+}
